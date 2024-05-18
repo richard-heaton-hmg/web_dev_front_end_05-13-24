@@ -2,8 +2,65 @@
 <html>
   <head>
     <title>This is the title of the webpage!</title>
+
+    <style>
+
+      .extra-room{
+        margin: .5rem;
+      }
+
+    </style>
   </head>
   <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <h1 id="h1Id" class="green">This is the heading.</h1>
+
+    <div id="h4Div">
+      <h4>This is our h6</h4>
+    </div>
+
+    <input id="firstInput" type="text" class="extra-room" />
+    <br/>
+    <input id="secondInput" type="text" class="extra-room" />
+    <br/>
+    <button id="button" class="extra-room">Button</button>
+
+    <div>
+      <p>this is under the header but above the other paragraphs</p>
+    </div>
+    <p id="firstParagraph">This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+
+    <p id="secondParagraph" class="green">This is the second paragraph.</p>
+
+    <p id="thirdParagraph" class="green">This is the third</p>
+
+    <p id="fourthParagraph">This is the fourth</p>
   </body>
+
+  <script>
+    //alert('hello, world!')
+    //document.getElementById('button').style.color = red;
+
+    function add(){
+      const firstInputElem = document.getElementById("firstInput");
+      const secondInputElem = document.getElementById("secondInput");
+
+      console.log('first Input Valu: ', firstInputElem.value)
+      console.log('second Input Value: ', secondInputElem.value)
+
+      const total = Number(firstInputElem.value) + Number(secondInputElem.value)
+
+      console.log('total: ', total)
+    }
+
+    function alertFunction2() {
+      alert('works here too!!')
+    }
+
+    function pageLoad(){
+      const buttonElem = document.getElementById("button");
+      buttonElem.onclick = add;
+    }
+
+    pageLoad()
+  </script>
 </html>
