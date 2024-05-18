@@ -1,5 +1,7 @@
 # Web Developer Path - Front End - 05/13/24
 
+# We were here!!!!!
+
 ## Month #1 - Basics
 ### Week #1
 - Web Basics
